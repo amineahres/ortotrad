@@ -5,14 +5,20 @@ body {
     align-items: flex-start;
 }
 
-textarea#input_instructions {
-    order: 1;
-    flex: 0 0 auto;
+textarea#input_instructions, #response_table {
+    width: calc(50ch + 4px); /* ch is a CSS unit equal to the width of the "0" character */
+    height: calc(20em + 4px); /* em is a CSS unit equal to the current font size */
     margin-right: 20px; /* gives some space between the textarea and the response */
 }
 
-p {
-    order: 2;
-    flex: 1 0 auto;
-    color: blue; /* changes the font color to blue */
+#response_table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+#response_table p {
+    color: black; /* changes the font color to blue */
 }
