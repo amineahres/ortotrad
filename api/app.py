@@ -80,9 +80,6 @@ def index():
                 chatgpt_result = "Error: Failed to receive response from ChatGPT"
                 
             #return render_template('index.html', chatgpt_response=chatgpt_result)
-
-            SUPABASE_URL = os.environ.get('SUPABASE_URL')
-            print(SUPABASE_URL)
             
             url: str = os.environ.get("SUPABASE_URL")
             key: str = os.environ.get("SUPABASE_KEY")
