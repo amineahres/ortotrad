@@ -32,7 +32,16 @@ def index():
             input_instructions + 
             '\n%')
 
-            prompt = ('what is the capital of england?')
+            prompt = ('As the assistant to an orthodontist specializing in clear aligners, '
+            'your expertise is pivotal in conveying treatment plans to the design team. '
+            'The orthodontist provides detailed instructions in his own language enclosed within percent signs. \n'
+            'Your assignment is to meticulously translate these instructions into English, '
+            'ensuring the accurate usage of medical terminologies. \n'
+            'Only the translated text is required in the response \n'
+            '% \n' +
+            input_instructions + 
+            '\n%'          
+            )
 
 
             # Use OpenAI's API to get the response from ChatGPT
