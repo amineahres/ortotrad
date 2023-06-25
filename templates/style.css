@@ -1,0 +1,89 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+p {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #dff0d8;
+    border-radius: 5px;
+    color: #3c763d;
+}
+Here is the updated HTML file:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form action="/" method="post">
+        
+        <label for="input_type">Content Type</label>
+        <select name="input_type" id="input_type">
+            <option value="email">Email</option>
+            <option value="team_message">Team Message</option>
+            <option value="social_media_post">Social Media Post</option>
+        </select>
+        <br>
+        
+        <label for="input_tone">Tone</label>
+        <select name="input_tone" id="input_tone">
+            <option value="formal">Formal</option>
+            <option value="informal">Informal</option>
+            <option value="friendly">Friendly</option>
+        </select>
+        <br>
+        
+        <label for="input_length">Length</label>
+        <select name="input_length" id="input_length">
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+        </select>
+        <br>
+        
+        <label for="input_context">Context (optional):</label>
+        <textarea name="input_context" id="input_context" rows="3" cols="50" placeholder="This is an email for my boss /
