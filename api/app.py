@@ -38,6 +38,7 @@ def index():
             'Your assignment is to meticulously translate these instructions into English, '
             'ensuring the accurate usage of medical terminologies. \n'
             'Only the translated text is required in the response \n'
+            'Use the same line breaks \n'
             '% \n' +
             input_instructions + 
             '\n%'          
