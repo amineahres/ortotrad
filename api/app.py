@@ -8,8 +8,8 @@ app = Flask(__name__, template_folder=os.path.abspath('templates'))
 
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
-##SUPABASE_URL = os.environ.get('SUPABASE_URL')
-##SUPABASE_KEY = os.environ.get('SUPABASE_KEY')
+SUPABASE_URL = os.environ.get('SUPABASE_URL')
+SUPABASE_KEY = os.environ.get('SUPABASE_KEY')
 chatgpt_api_url = "https://api.openai.com/v1/chat/completions"
 
 @app.route('/', methods=['GET', 'POST'])
@@ -38,7 +38,7 @@ def index():
             'Your assignment is to meticulously translate these instructions into English, '
             'ensuring the accurate usage of medical terminologies. \n'
             'Only the translated text is required in the response \n'
-            'Use the same line breaks \n'
+            'Use the same line breaks in the response \n'
             '% \n' +
             input_instructions + 
             '\n%'          
@@ -85,10 +85,10 @@ def index():
             key: str = os.environ.get("SUPABASE_KEY")
             
             # Save data to Supabase
-            ##if chatgpt_response is not None:
-            ##    print('Level 2 reached')
-            ##    supabase: Client = create_client(url, key)
-            ##    supabase.table('user_inputs').insert({"input_type": input_type, "input_tone": input_tone, "input_length": input_length, "input_context": input_context, "input_content": input_content, "output_prompt": prompt, "output_result": chatgpt_result}).execute()
+            if chatgpt_response is not None:
+                print('Level 2 reached')
+                supabase: Client = create_client(url, key)
+                supabase.table('orthotrad_user_inputs').insert({"input_instructions": input_instructions, "output_prompt": prompt, "output_result": chatgpt_result}).execute()
                 
             return render_template('index.html', chatgpt_response=chatgpt_result)
     
