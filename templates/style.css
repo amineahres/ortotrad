@@ -1,24 +1,28 @@
 body {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: flex-start;
 }
 
-textarea#input_instructions, #response_table {
-    width: calc(50ch + 4px); /* ch is a CSS unit equal to the width of the "0" character */
-    height: calc(20em + 4px); /* em is a CSS unit equal to the current font size */
-    margin-right: 20px; /* gives some space between the textarea and the response */
+form {
+    margin-right: 20px; /* provides space between the form and the answer */
+}
+
+textarea#input_instructions {
+    width: calc(50ch + 4px); /* 'ch' is a CSS unit equal to the width of the "0" character */
+    height: calc(20em + 4px); /* 'em' is a CSS unit equal to the current font size */
 }
 
 #response_table {
+    width: calc(50ch + 4px);
+    height: calc(20em + 4px);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc;
-    padding: 1em;
+    border: 1px solid #ccc; /* gives a border to the table */
 }
 
 #response_table p {
-    color: black; /* changes the font color to blue */
+    color: blue; /* changes the font color to blue */
 }
+
