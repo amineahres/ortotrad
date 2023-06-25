@@ -8,8 +8,8 @@ app = Flask(__name__, template_folder=os.path.abspath('templates'))
 
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
-SUPABASE_URL = os.environ.get('SUPABASE_URL')
-SUPABASE_KEY = os.environ.get('SUPABASE_KEY')
+#SUPABASE_URL = os.environ.get('SUPABASE_URL')
+#SUPABASE_KEY = os.environ.get('SUPABASE_KEY')
 chatgpt_api_url = "https://api.openai.com/v1/chat/completions"
 
 @app.route('/', methods=['GET', 'POST'])
@@ -80,13 +80,15 @@ def index():
                 chatgpt_result = "Error: Failed to receive response from ChatGPT"
                 
             #return render_template('index.html', chatgpt_response=chatgpt_result)
+
+            SUPABASE_URL = os.environ.get('SUPABASE_URL')
+            print(SUPABASE_URL)
             
             url: str = os.environ.get("SUPABASE_URL")
             key: str = os.environ.get("SUPABASE_KEY")
             
             # Save data to Supabase
             if chatgpt_response is not None:
-                print('Level 2 reached')
                 supabase: Client = create_client(url, key)
                 supabase.table('orthotrad_user_inputs').insert({"input_instructions": input_instructions, "output_prompt": prompt, "output_result": chatgpt_result}).execute()
                 
