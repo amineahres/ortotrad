@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> WRAITER MAIN PAGE </title>
+    <link rel="stylesheet" href="/templates/style.css">
+</head>
+<body>
+    <form action="/" method="post">
+        
+        <label for="input_type">Content Type</label>
+        <select name="input_type" id="input_type">
+            <option value="email">Email</option>
+            <option value="team_message">Team Message</option>
+            <option value="social_media_post">Social Media Post</option>
+        </select>
+        <br>
+        
+        <label for="input_tone">Tone</label>
+        <select name="input_tone" id="input_tone">
+            <option value="formal">Formal</option>
+            <option value="informal">Informal</option>
+            <option value="friendly">Friendly</option>
+        </select>
+        <br>
+        
+        <label for="input_length">Length</label>
+        <select name="input_length" id="input_length">
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+        </select>
+        <br>
+        
+        <label for="input_context">Context (optional):</label>
+        <textarea name="input_context" id="input_context" rows="3" cols="50" placeholder="This is an email for my boss / This is a message for my colleagues on slack..."></textarea>
+        <br>
 
+        <label for="input_content"> Content (required):</label>
+        <textarea name="input_content" id="input_content" rows="20" cols="50" placeholder="Put your text here" required></textarea>
+
+        <input type="submit" value="Generate Text">
+    </form>
+
+    {% if chatgpt_response %}
+        <p>{{ chatgpt_response }}</p>
+    {% endif %}
+</body>
+</html>
