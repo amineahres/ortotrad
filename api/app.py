@@ -20,7 +20,7 @@ def index():
         input_instructions = request.form['input_instructions']
 
         # Make sure that content is not null
-        if input_instructions is None or len(input_content) < 5:
+        if input_instructions is None or len(input_instructions) < 5:
             chatgpt_result = "Merci de renseigner au moins 5 lettres"
             return render_template('index.html', chatgpt_response=chatgpt_result)
         else:
