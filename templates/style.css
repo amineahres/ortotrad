@@ -18,7 +18,7 @@ body {
 
 textarea#input_instructions {
     width: calc(50ch + 4px);
-    height: calc(20em + 4px);
+    height: calc(15em + 4px);
 }
 
 .response-container label {
@@ -35,5 +35,5 @@ textarea#input_instructions {
 }
 
 #response_table p {
-    color: blue;
+    color: black;
 }
