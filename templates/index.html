@@ -7,12 +7,12 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="/" method="post">        
+        <form action="/" method="post" onsubmit="document.getElementById('submit_button').value = 'Loading...';">        
             <div class="instruction-field">
                 <label for="input_instructions"> Instructions:</label>
                 <textarea name="input_instructions" id="input_instructions" rows="20" cols="50" placeholder="Renseignez vos instructions ici... " required></textarea>
             </div>
-            <input type="submit" value="Traduire">
+            <input type="submit" value="Traduire" id="submit_button">
         </form>
     </div>
 
@@ -21,5 +21,11 @@
             <p>{{ chatgpt_response }}</p>
         {% endif %}
     </div>
+
+    <script>
+    window.onload = function() {
+        document.getElementById('submit_button').value = "Traduire";
+    };
+    </script>
 </body>
 </html>
