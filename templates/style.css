@@ -1,12 +1,12 @@
 body {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* centers items along the row */
+    justify-content: center;
     align-items: flex-start;
 }
 
 .form-container {
-    margin-right: 20px; /* provides space between the form and the answer */
+    margin: 50px 20px 0px 0px; /* 50px top margin to push the form down */
 }
 
 .instruction-field {
@@ -15,8 +15,8 @@ body {
 }
 
 textarea#input_instructions {
-    width: calc(50ch + 4px); /* 'ch' is a CSS unit equal to the width of the "0" character */
-    height: calc(20em + 4px); /* 'em' is a CSS unit equal to the current font size */
+    width: calc(50ch + 4px);
+    height: calc(20em + 4px);
 }
 
 #response_table {
@@ -25,7 +25,11 @@ textarea#input_instructions {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc; /* gives a border to the table */
+    border: 1px solid #ccc;
+}
+
+#response_table p {
+    color: blue;
 }
 
 #response_table p {
