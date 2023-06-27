@@ -16,10 +16,13 @@
         </form>
     </div>
 
-    <div id="response_table">
-        {% if chatgpt_response %}
-            <p>{{ chatgpt_response }}</p>
-        {% endif %}
+    <div class="response-container">
+        <label for="response_table"> Traduction: </label>
+        <div id="response_table">
+            {% if chatgpt_response %}
+                <p>{{ chatgpt_response }}</p>
+            {% endif %}
+        </div>
     </div>
 
     <script>
