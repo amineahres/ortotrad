@@ -4,8 +4,13 @@ body {
     align-items: flex-start;
 }
 
-form {
+.form-container {
     margin-right: 20px; /* provides space between the form and the answer */
+}
+
+.instruction-field {
+    display: flex;
+    flex-direction: column;
 }
 
 textarea#input_instructions {
@@ -23,6 +28,5 @@ textarea#input_instructions {
 }
 
 #response_table p {
-    color: black; /* changes the font color to blue */
-}
+    color: blue; /* changes the font color to blue */
 
