@@ -1,6 +1,7 @@
 body {
     display: flex;
     flex-direction: row;
+    justify-content: center; /* centers items along the row */
     align-items: flex-start;
 }
 
@@ -29,4 +30,5 @@ textarea#input_instructions {
 
 #response_table p {
     color: blue; /* changes the font color to blue */
+}
 
