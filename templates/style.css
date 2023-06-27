@@ -27,7 +27,7 @@ textarea#input_instructions {
 
 #response_table {
     width: 600px; /* Set the width to be same as the form */
-    height: 400px; /* Set the height to be same as the form */
+    height: 380px; /* Set the height to be same as the form */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +37,6 @@ textarea#input_instructions {
 }
 
 #response_table p {
-    color: #a0a2a3;
+    color: grey;
     margin: 0; /* remove default margins */
 }
