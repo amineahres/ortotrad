@@ -6,7 +6,7 @@ body {
 }
 
 .form-container {
-    margin: 200px 20px 0px 0px;
+    margin: 150px 20px 0px 0px; /* 150px top margin to push the form down */
 }
 
 .instruction-field {
@@ -20,6 +20,7 @@ textarea#input_instructions {
 }
 
 #response_table {
+    margin-top: 150px; /* push the response down by 150px */
     width: calc(50ch + 4px);
     height: calc(20em + 4px);
     display: flex;
@@ -29,10 +30,5 @@ textarea#input_instructions {
 }
 
 #response_table p {
-    color: black;
+    color: blue;
 }
-
-#response_table p {
-    color: blue; 
-}
-
