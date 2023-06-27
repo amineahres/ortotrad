@@ -26,7 +26,7 @@ textarea#input_instructions {
 }
 
 #response_table {
-    width: calc(150ch + 4px);
+    width: calc(50ch + 4px);
     height: calc(20em + 4px);
     display: flex;
     justify-content: center;
