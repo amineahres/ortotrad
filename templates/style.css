@@ -6,7 +6,7 @@ body {
 }
 
 .form-container {
-    margin: 100px 20px 0px 0px;
+    margin: 200px 20px 0px 0px;
 }
 
 .instruction-field {
@@ -29,10 +29,10 @@ textarea#input_instructions {
 }
 
 #response_table p {
-    color: blue;
+    color: black;
 }
 
 #response_table p {
-    color: blue; /* changes the font color to blue */
+    color: blue; 
 }
 
