@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="/templates/style.css">
 </head>
 <body>
-    <form action="/" method="post">        
-        <label for="input_content"> Instructions:</label>
-        <textarea name="input_instructions" id="input_instructions" rows="20" cols="50" placeholder="Renseignez vos instructions ici... " required></textarea>
-        <input type="submit" value="Traduire">
-    </form>
+    <div class="form-container">
+        <form action="/" method="post">        
+            <div class="instruction-field">
+                <label for="input_instructions"> Instructions:</label>
+                <textarea name="input_instructions" id="input_instructions" rows="20" cols="50" placeholder="Renseignez vos instructions ici... " required></textarea>
+            </div>
+            <input type="submit" value="Traduire">
+        </form>
+    </div>
 
     <div id="response_table">
         {% if chatgpt_response %}
@@ -19,4 +23,3 @@
     </div>
 </body>
 </html>
-
