@@ -27,13 +27,11 @@ textarea#input_instructions {
 
 #response_table {
     width: 600px; /* Set the width to be same as the form */
-    height: 380px; /* Set the height to be same as the form */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 390px; /* Set the height to be same as the form */
     border: 1px solid #ccc;
     padding: 10px; /* Add some padding inside the box */
-    background-color: #F5F5F5; /* Set the background color to very light grey */ 
+    background-color: #F5F5F5; /* Set the background color to very light grey */
+}
 }
 
 #response_table p {
