@@ -32,8 +32,11 @@ textarea#input_instructions {
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
+    padding: 10px; /* Add some padding inside the box */
+    background-color: grey; /* Set the background color to grey */
 }
 
 #response_table p {
-    color: blue;
+    color: black;
+    margin: 0; /* remove default margins */
 }
