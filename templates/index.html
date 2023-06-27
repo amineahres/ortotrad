@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="form-container">
-        <form action="/" method="post">        
+        <form action="/" method="post" onsubmit="document.getElementById('submit_button').value = 'Loading...';">        
             <div class="instruction-field">
                 <label for="input_instructions"> Instructions:</label>
                 <textarea name="input_instructions" id="input_instructions" rows="20" cols="50" placeholder="Renseignez vos instructions ici... " required></textarea>
@@ -19,41 +19,17 @@
     <div class="response-container">
         <label for="response_table"> Traduction: </label>
         <div id="response_table">
-            <p></p>
+            {% if chatgpt_response %}
+                <p>{{ chatgpt_response }}</p>
+            {% endif %}
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("form").on("submit", function(event){
-                event.preventDefault(); // Prevent the form from submitting normally
-
-                $.ajax({
-                    url: "/", // the endpoint, the same url in the form's action attribute
-                    type: "POST", // http method
-                    data: { input_instructions: $('#input_instructions').val() }, // data to be sent to the server
-
-                    // handle a successful response
-                    success : function(response) {
-                        $('#response_table p').text(response.chatgpt_response); // Set the text of the response p element
-                        document.getElementById('submit_button').value = "Traduire"; // Change the submit button text back to "Traduire"
-                    },
-
-                    // handle a non-successful response
-                    error : function(xhr,errmsg,err) {
-                        console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
-                        document.getElementById('submit_button').value = "Traduire"; // Change the submit button text back to "Traduire"
-                    }
-                });
-            });
-        });
-    </script>
-
-    <script>
-        window.onload = function() {
-            document.getElementById('submit_button').value = "Traduire";
-        };
+    window.onload = function() {
+        document.getElementById('submit_button').value = "Traduire";
+    };
     </script>
 </body>
 </html>
+
