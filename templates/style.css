@@ -7,7 +7,7 @@ body {
 }
 
 #header {
-    position: absolute;  /* Sets the position relative to the document */
+    /* position: absolute; Sets the position relative to the document */
     top: 20px;  /* Distance from the top of the document */
     left: 30px;  /* Distance from the left of the document */
     font-size: 20px;  /* Sets the font size */
