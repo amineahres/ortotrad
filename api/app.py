@@ -38,6 +38,7 @@ def index():
             'Your assignment is to meticulously translate these instructions into English, '
             'ensuring the accurate usage of medical terminologies. \n'
             'Only the translated text is required in the response \n'
+            'If the user enters non medical prompt, display the following response:"I am an AI trained exclusively to translate orthodontist instructions" \n'
             'Use the same line breaks in the response \n'
             '% \n' +
             input_instructions + 
