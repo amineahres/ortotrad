@@ -3,19 +3,25 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;  /* Adds some space around the entire body */
 }
 
-#header {
-    position: absolute;  /* Sets the position relative to the document */
-    top: 10px;  /* Distance from the top of the document */
-    left: 20px;  /* Distance from the left of the document */
-    font-size: 20px;  /* Sets the font size */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 1000;
 }
 
 .form-container,
 .response-container {
-    margin: 150px 20px 0px 0px;  /* 150px top margin to push the form and response down */
+    margin-top: 100px; /* Adjust this value as needed to make room for the header */
+    margin-right: 20px;
 }
 
 .instruction-field,
@@ -25,23 +31,23 @@ body {
 }
 
 textarea#input_instructions {
-    width: 600px;  /* Set the width */
-    height: 400px;  /* Set the height */
+    width: 600px;
+    height: 400px;
 }
 
 .response-container label {
-    margin: 0;  /* remove default margins */
+    margin: 0;
 }
 
 #response_table {
-    width: 600px;  /* Set the width to be same as the form */
-    height: 385px;  /* Set the height to be same as the form */
+    width: 600px;
+    height: 385px;
     border: 1px solid #ccc;
-    padding: 10px;  /* Add some padding inside the box */
-    background-color: #F5F5F5;  /* Set the background color to very light grey */
+    padding: 10px;
+    background-color: #F5F5F5;
 }
 
 #response_table p {
     color: grey;
-    margin: 0;  /* remove default margins */
+    margin: 0;
 }
