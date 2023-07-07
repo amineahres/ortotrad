@@ -5,49 +5,19 @@ body {
     align-items: flex-start;
 }
 
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
+header {
+    text-align: left;
     padding: 20px;
-    background-color: #fff;
-    z-index: 1000;
 }
 
-.form-container,
-.response-container {
-    margin-top: 100px; /* Adjust this value as needed to make room for the header */
-    margin-right: 20px;
+header h1 {
+    font-size: 24px;
+    color: #333;
 }
 
-.instruction-field,
-.response-container {
-    display: flex;
-    flex-direction: column;
+header p {
+    font-size: 18px;
+    color: #666;
 }
 
-textarea#input_instructions {
-    width: 600px;
-    height: 400px;
-}
-
-.response-container label {
-    margin: 0;
-}
-
-#response_table {
-    width: 600px;
-    height: 385px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #F5F5F5;
-}
-
-#response_table p {
-    color: grey;
-    margin: 0;
-}
+/*... rest of your CSS ...*/
