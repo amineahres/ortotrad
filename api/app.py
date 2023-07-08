@@ -63,7 +63,7 @@ def index():
                 json={
                     "messages": messages,
                     #"model": "gpt-3.5-turbo",
-                    "model": "gpt-4",
+                    "model": "gpt-4-0613",
                     #"max_tokens": 600,
                     "temperature": 0.5
                 }
